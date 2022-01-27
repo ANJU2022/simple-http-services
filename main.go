@@ -94,10 +94,6 @@ func process(w http.ResponseWriter, r *http.Request) {
 
 	case "POST":
 
-		if err := r.ParseForm(); err != nil {
-			fmt.Fprintf(w, "ParseForm() err: %v", err)
-			return
-		}
 		err := r.ParseForm()
 		if err != nil {
 			fmt.Fprintf(w, "ParseForm() err: %v", err)
