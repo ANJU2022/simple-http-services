@@ -58,7 +58,7 @@ func ip4or6(ip string) string {
 			if ip[i] == ':' {
 
 				if len(sub) > 4 {
-					return "1 invalid IP"
+					return "invalid IP"
 				}
 
 				sub = ""
@@ -66,7 +66,7 @@ func ip4or6(ip string) string {
 			} else {
 
 				if (ip[i] < 'A' || ip[i] > 'F') && (ip[i] < 'a' && ip[i] > 'f') && (ip[i] < '0' || ip[i] > '9') {
-					return "2 invalid IP"
+					return "invalid IP"
 				}
 
 				sub += string(ip[i])
